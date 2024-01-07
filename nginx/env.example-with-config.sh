@@ -1,0 +1,8 @@
+CONTAINER_NAME="nginx"
+ROOT_PATH="/var/docker/nginx"
+WEB_PATH="$ROOT_PATH/data"
+CONFIG_PATH="$ROOT_PATH/config"
+IP_DB="$ROOT_PATH/ip-db"
+LOG_PATH="/var/log/nginx"
+NETWORK="main"
+VERSION="stable-alpine3.17"
