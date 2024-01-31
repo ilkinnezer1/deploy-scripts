@@ -25,3 +25,4 @@ sudo docker run --detach \
   --volume "$CERTS_PATH":/opt/bitnami/pgbouncer/certs \
   --restart unless-stopped \
   bitnami/pgbouncer:"$VERSION"
+chmod -R a+rwx "$SERVICE_PATH"
