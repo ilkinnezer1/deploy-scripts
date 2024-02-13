@@ -1,0 +1,6 @@
+NETWORK="main"
+CONTAINER_NAME="fluent-bit"
+SERVICE_PATH="/var/docker/$CONTAINER_NAME"
+CONFIGS_PATH="$SERVICE_PATH/conf"
+LOKI_DOMAIN="http://loki:3100"
+VERSION="1.21.0"
