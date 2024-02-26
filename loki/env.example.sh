@@ -1,3 +1,4 @@
+NGINX_AUTH_PATH="/var/docker/nginx/config/auth"
 USERNAME="loki_user"
 PASSWORD="superpassword"
 CONTAINER_NAME="loki"

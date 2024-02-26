@@ -4,7 +4,7 @@ bash ../remove.sh "$CONTAINER_NAME"
 docker run \
   --rm \
   --entrypoint htpasswd \
-  httpd:2 -Bbn $USERNAME $PASSWORD >> $SERVICE_PATH/auth/.htpasswd
+  httpd:2 -Bbn $USERNAME $PASSWORD >> $NGINX_AUTH_PATH/$CONTAINER_NAME/.htpasswd
 
 docker run -d \
     -v $SERVICE_PATH/config:/mnt/config \
