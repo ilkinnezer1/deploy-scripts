@@ -14,3 +14,4 @@ docker run -d \
     --network main \
     grafana/loki:$VERSION \
     -config.file=/mnt/config/$CONFIG_FILE
+chmod -R a+rwx $SERVICE_PATH/data
