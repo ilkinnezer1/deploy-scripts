@@ -1,3 +1,5 @@
+USERNAME="loki_user"
+PASSWORD="superpassword"
 CONTAINER_NAME="loki"
 VERSION="2.9.1"
 SERVICE_PATH="/var/docker/$CONTAINER_NAME"
