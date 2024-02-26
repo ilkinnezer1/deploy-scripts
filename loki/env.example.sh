@@ -1,0 +1,4 @@
+CONTAINER_NAME="loki"
+VERSION="2.9.1"
+SERVICE_PATH="/var/docker/$CONTAINER_NAME"
+CONFIG_FILE="loki-config.yaml"
