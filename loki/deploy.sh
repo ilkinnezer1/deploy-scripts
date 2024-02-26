@@ -8,6 +8,7 @@ docker run \
 
 docker run -d \
     -v $SERVICE_PATH/config:/mnt/config \
+    -v $SERVICE_PATH/data:/$DATA_PATH \
     --name "$CONTAINER_NAME" \
     --restart unless-stopped \
     --network main \
