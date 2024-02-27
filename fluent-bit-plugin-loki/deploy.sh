@@ -5,6 +5,7 @@ echo "load env.."
 bash ../remove.sh "$CONTAINER_NAME"
 sudo docker run -d \
   --restart unless-stopped \
+  --publish 24224:24224 \
   --network="$NETWORK" \
   --name="$CONTAINER_NAME" \
   -v $CONFIGS_PATH:/fluent-bit/etc \
