@@ -19,6 +19,8 @@ docker run -d \
     -v $SERVICE_PATH/data:$DATA_PATH \
     --name "$CONTAINER_NAME" \
     --restart unless-stopped \
+    --log-opt max-size=3G \
+    --log-opt max-file=3 \
     --network main \
     grafana/loki:$VERSION \
     -config.file=/mnt/config/$CONFIG_FILE
