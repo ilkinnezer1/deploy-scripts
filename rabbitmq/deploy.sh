@@ -8,8 +8,9 @@ sudo docker run --detach \
   --hostname "$HOST_NAME" \
   --env RABBITMQ_DEFAULT_USER="$RABBITMQ_DEFAULT_USER" \
   --env RABBITMQ_DEFAULT_PASS="$RABBITMQ_DEFAULT_PASS" \
+  --env RABBITMQ_NODENAME="$HOST_NAME" \
   --network="$NETWORK" \
-  --volume "$DATA_PATH":/var/lib/rabbitmq/mnesia/rabbit@$HOST_NAME \
+  --volume "$DATA_PATH":/var/lib/rabbitmq \
   --volume "$LOG_PATH":/var/log/rabbitmq \
   --restart unless-stopped \
   rabbitmq:"$VERSION"
