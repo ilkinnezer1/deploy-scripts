@@ -1,0 +1,5 @@
+VERSION="main"
+NETWORK="main"
+CONTAINER_NAME="docker-registry-ui"
+NGINX_PROXY_PASS_URL="http://docker-registry:5000"
+REGISTRY_TITLE="Docker Registry UI"
