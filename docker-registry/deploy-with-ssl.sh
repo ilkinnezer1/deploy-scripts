@@ -24,5 +24,6 @@ docker run --detach \
   -e REGISTRY_AUTH_HTPASSWD_PATH=/auth/.htpasswd \
   -e REGISTRY_HTTP_TLS_CERTIFICATE=${CERT_DIR}/${DOMAIN}.crt \
   -e REGISTRY_HTTP_TLS_KEY=${CERT_DIR}/${DOMAIN}.key \
+  -e REGISTRY_STORAGE_DELETE_ENABLED=true \
   --volume ${CERT_DIR}:${CERT_DIR} \
   registry:"$VERSION"

@@ -14,4 +14,5 @@ docker run --detach \
   -e "REGISTRY_AUTH=htpasswd" \
   -e "REGISTRY_AUTH_HTPASSWD_REALM=registry-realm" \
   -e REGISTRY_AUTH_HTPASSWD_PATH=/auth/.htpasswd \
+  -e REGISTRY_STORAGE_DELETE_ENABLED=true \
   registry:"$VERSION"
