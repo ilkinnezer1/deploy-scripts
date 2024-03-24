@@ -26,4 +26,5 @@ docker run --detach \
   -e REGISTRY_HTTP_TLS_KEY=${CERT_DIR}/${DOMAIN}.key \
   -e REGISTRY_STORAGE_DELETE_ENABLED=true \
   --volume ${CERT_DIR}:${CERT_DIR} \
+  --publish 5000:5000 \
   registry:"$VERSION"
