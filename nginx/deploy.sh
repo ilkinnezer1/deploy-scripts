@@ -8,6 +8,6 @@ sudo docker run --detach \
   --network="$NETWORK" \
   --volume "$WEB_PATH":/usr/share/nginx/html \
   --volume "$CONFIG_PATH":/etc/nginx/conf.d \
-  --volume ${CERT_DIR}:/etc/nginx/ssl \
+  --volume ${CERTS_PATH}:/etc/nginx/ssl \
   --restart unless-stopped \
   nginx:"$VERSION"
