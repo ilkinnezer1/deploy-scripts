@@ -13,6 +13,7 @@ req -new -newkey rsa:4096 -days 365 -nodes -x509 \
 bash ../remove.sh "$CONTAINER_NAME"
 sudo docker run --detach \
   --network="$NETWORK" \
+  --publish 6432:6432 \
   --name "$CONTAINER_NAME" \
   --env=PGBOUNCER_DATABASE="$PGBOUNCER_DATABASE" \
   --env=POSTGRESQL_HOST="$POSTGRESQL_HOST" \
