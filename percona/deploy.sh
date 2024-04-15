@@ -2,6 +2,7 @@ echo "load env.."
 . env.sh
 bash ../remove.sh "$CONTAINER_NAME"
 sudo docker run --detach \
+  --publish 3306:3306 \
   --name "$CONTAINER_NAME" \
   --env MYSQL_ROOT_PASSWORD="$ROOT_PASSWORD" \
   --network="$NETWORK" \
