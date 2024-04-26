@@ -3,7 +3,7 @@ echo "load env.."
 bash ../remove.sh "$CONTAINER_NAME"
 sudo docker run --detach \
   --name "$CONTAINER_NAME" \
-  --publish 443:443 \  
+  --publish 443:443 \
   --publish 80:80 \
   --network="$NETWORK" \
   --volume "$LOG_PATH":/var/log/nginx \
