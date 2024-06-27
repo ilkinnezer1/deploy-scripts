@@ -10,10 +10,19 @@ services:
       - "--providers.docker.exposedbydefault=false"
       - "--entrypoints.web.address=:80"
       - "--entrypoints.websecure.address=:443"
+      - "--entrypoints.postgres.address=:5432"
+      - "--entrypoints.mysql.address=:3306"
+      - "--entrypoints.redis.address=:6379"
+      - "--entrypoints.rabbitmq.address=:5672"
+
     ports:
       - "80:80"  # HTTP
       - "443:443"  # HTTPS, optional for local setup
       - "8080:8080"  # Traefik Dashboard
+      - "5432:5432" # PostgreSQL
+      - "3306:3306" # MySQL
+      - "6379:6379" # Redis
+      - "5672:5672" # RabbitMQ
     volumes:
       - "/var/run/docker.sock:/var/run/docker.sock"
       - "./traefik.yml:/traefik.yml"  # Optional, if you have further configurations
