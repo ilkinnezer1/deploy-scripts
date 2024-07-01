@@ -3,4 +3,5 @@ MONGO_ROOT_USER="root"
 MONGO_ROOT_PASSWORD="superpassword"
 DATA_PATH="/var/docker/$CONTAINER_NAME"
 NETWORK="main"
+PORT=27017
 VERSION="5.0.26-focal"

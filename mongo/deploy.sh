@@ -6,7 +6,7 @@ bash ../remove.sh $CONTAINER_NAME
 
 docker run -d \
     --network="$NETWORK" \
-    --publish 27017:27017 \
+    --publish $PORT:27017 \
     --restart unless-stopped \
     --name $CONTAINER_NAME \
     -v $DATA_PATH:/data/db \
