@@ -4,9 +4,9 @@ echo "load env.."
 
 bash ../remove.sh "$CONTAINER_NAME"
 
-sudo docker run --detach \
-  --restart unless-stopped \
+sudo docker run --detach --restart unless-stopped \
   --network="$NETWORK" \
+  --publish 15692:15692 \
   --publish 15672:15672 \
   --publish 5672:5672 \
   --name "$CONTAINER_NAME" \
