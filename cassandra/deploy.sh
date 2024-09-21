@@ -4,10 +4,11 @@ echo "load env.."
 
 bash ../remove.sh $CONTAINER_NAME
 
-docker run --name $CONTAINER_NAME -d \
-  --restart unless-stopped \
+docker run -d --restart unless-stopped \
   --network=$NETWORK \
-  -p $PORT:9042 \
+  --publish $PORT:9042 \
+  --name $CONTAINER_NAME  \
+  -e CASSANDRA_CLUSTER_NAME=$CASSANDRA_CLUSTER_NAME \
   -e CASSANDRA_USER=$CASSANDRA_USER \
   -e CASSANDRA_PASSWORD=$CASSANDRA_PASSWORD \
   -v $DATA_PATH:/var/lib/cassandra \
