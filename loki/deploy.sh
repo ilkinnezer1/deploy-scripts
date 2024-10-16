@@ -15,6 +15,7 @@ docker run \
 
 # Run the Loki container
 docker run -d \
+    -p 3100:3100 \
     -v $CONFIG_PATH:/mnt/config \
     -v $DATA_PATH:/loki \
     --name "$CONTAINER_NAME" \
