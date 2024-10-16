@@ -15,8 +15,8 @@ docker run \
 
 # Run the Loki container
 docker run -d \
-    -v $SERVICE_PATH/config:/mnt/config \
-    -v $SERVICE_PATH/data:$DATA_PATH \
+    -v $CONFIG_PATH:/mnt/config \
+    -v $DATA_PATH:/loki \
     --name "$CONTAINER_NAME" \
     --restart unless-stopped \
     --log-opt max-size=3G \
