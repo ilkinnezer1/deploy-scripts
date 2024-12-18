@@ -5,8 +5,8 @@ echo "load env.."
 docker run --rm \
 -v $CERTS_PATH:/export \
 alpine/openssl \
-req -new -newkey rsa:4096 -days 365 -nodes -x509 \
--subj '/CN=www.mydom.com/O=MyCompany/C=US' \
+req -new -newkey rsa:4096 -days 5475 -nodes -x509 \
+-subj '/CN=www.mydom.com/O=Organization/C=US' \
 -keyout /export/pgbouncer.key \
 -out /export/pgbouncer.crt
 
