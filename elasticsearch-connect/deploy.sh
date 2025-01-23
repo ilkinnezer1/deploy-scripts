@@ -1,3 +1,9 @@
+echo "load env.."
+
+. $1.sh
+
+bash ../remove.sh "$CONTAINER_NAME"
+
 docker run --detach --restart unless-stopped --tty \
     --network $NETWORK \
     --name $CONTAINER_NAME \
