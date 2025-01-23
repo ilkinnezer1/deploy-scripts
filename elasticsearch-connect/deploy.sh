@@ -1,7 +1,7 @@
 docker run --detach --restart unless-stopped --tty \
-    --network main \
-    --name elasticsearch-connector-mongodb-training \
-    --volume "/var/docker/elastic-connectors:/config" \
-    docker.elastic.co/integrations/elastic-connectors:8.17.1 \
+    --network $NETWORK \
+    --name $CONTAINER_NAME \
+    --volume "$CONFIG_PATH:/config" \
+    docker.elastic.co/integrations/elastic-connectors:$VERSION \
     /app/bin/elastic-ingest \
-    -c /config/config.yml
+    -c /config/$CONFIG_FILE
