@@ -10,14 +10,15 @@ req -new -newkey rsa:2048 -days 5475 -nodes -x509 \
   -out /export/vault.crt \
 
 bash ../remove.sh $CONTAINER_NAME
-docker run -d --restart unless-stopped --cap-add=IPC_LOCK \
+docker run -d --restart unless-stopped \
+  --cap-add=IPC_LOCK \
   --network $NETWORK \
   --name $CONTAINER_NAME \
   -p $EXPOSE_PORT:8200 \
+  -p $EXPOSE_CLUSTER_PORT:8201 \
   -v $CONFIG_PATH:/vault/config \
-  -v $CERTS_PATH:/vault/certs \
   -v $DATA_PATH:/vault/data \
-  -e VAULT_SKIP_VERIFY=true \
+  -v $CERTS_PATH:/vault/certs \
   hashicorp/vault:$VERSION \
-  server
+  server -config=/vault/config/$CONFIG_FILENAME
 chmod -R a+rwx "$SERVICE_PATH"
