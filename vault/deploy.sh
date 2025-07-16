@@ -20,5 +20,5 @@ docker run -d --restart unless-stopped \
   -v $DATA_PATH:/vault/data \
   -v $CERTS_PATH:/vault/certs \
   hashicorp/vault:$VERSION \
-  server -config=/vault/config/$CONFIG_FILENAME
+  vault server -config=/vault/config/$CONFIG_FILENAME
 chmod -R a+rwx "$SERVICE_PATH"
