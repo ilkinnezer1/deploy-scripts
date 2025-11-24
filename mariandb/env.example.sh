@@ -1,0 +1,5 @@
+CONTAINER_NAME="mariadb"
+ROOT_PASSWORD="VKyDAysdUGkHVEUeFEM8x3h3yDrkY7dN"
+DATA_PATH="/var/docker/mariadb/data"
+NETWORK="main"
+VERSION="10.3.39-focal"
