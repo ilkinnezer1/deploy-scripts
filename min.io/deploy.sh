@@ -1,3 +1,5 @@
+#!/bin/bash
+
 docker run --detach --restart unless-stopped \
   --network main \
   --name minio \

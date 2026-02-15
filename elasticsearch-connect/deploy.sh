@@ -1,3 +1,5 @@
+#!/bin/bash
+
 echo "load env.."
 
 . $1.sh

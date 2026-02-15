@@ -1,6 +1,9 @@
+#!/bin/bash
+
 echo "load env.."
 . env.sh \
 bash ../remove.sh "$CONTAINER_NAME"
+mkdir -p /var/docker/$CONTAINER_NAME/auth
 docker run \
   --rm \
   --entrypoint htpasswd \
