@@ -1,3 +1,5 @@
+#!/bin/bash
+
 echo "load env.."
 . env.sh
 bash ../remove.sh "$CONTAINER_NAME"

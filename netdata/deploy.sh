@@ -1,3 +1,5 @@
+#!/bin/bash
+
 docker run -d --name=netdata \
   --pid=host \
   --publish 19999:19999 \
